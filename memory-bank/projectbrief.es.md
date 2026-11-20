@@ -18,7 +18,7 @@ Detalle en [BRIEFING.md](../BRIEFING.md#the-departments-and-their-problems).
 
 | Área                       | Responsable                                           | Necesidad principal                                               |
 | -------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
-| Selección                  | Javier Almeida                                        | Scoring y ranking automático de currículum vítae (CV)             |
+| Selección                  | Javier Almeida                                        | Scoring y ranking automático de CV                                |
 | Formación                  | Elena Vargas                                          | Catálogo con inscripción online y recomendación de programas      |
 | Soporte externalizado      | Roberto Díaz                                          | Chatbot que resuelva el 40 % de consultas sin intervención humana |
 | Ventas                     | Megan Clarke o Marcos Ibáñez (pendiente de confirmar) | Prospección automatizada y alertas de seguimiento                 |
@@ -32,7 +32,7 @@ Detalle en [BRIEFING.md](../BRIEFING.md#the-departments-and-their-problems).
 Sistemas, automatizaciones y herramientas inteligentes para que Nexova haga lo que ya hace bien más rápido, a mayor escala y con menos esfuerzo manual.
 
 - **Por área**: dashboards sobre un pipeline de datos común, portales (candidatos, alumnos, empleados), automatizaciones con alertas y análisis de sentimiento de tickets.
-- **Capacidades de inteligencia artificial (IA)**: scoring y ranking de CV; Retrieval-Augmented Generation (RAG) sobre la base de candidatos y en el chatbot de soporte; búsqueda semántica en la base de conocimiento de soporte; recomendación de programas formativos; contenido asistido por IA; agentes para emails a candidatos, propuestas comerciales, consultas de Recursos Humanos, planes formativos, arquitectura técnica y consultas de dirección en lenguaje natural.
+- **Capacidades de IA**: scoring y ranking de CV; Retrieval-Augmented Generation (RAG) sobre la base de candidatos y en el chatbot de soporte; búsqueda semántica en la base de conocimiento de soporte; recomendación de programas formativos; contenido asistido por IA; agentes para emails a candidatos, propuestas comerciales, consultas de Recursos Humanos, planes formativos, arquitectura técnica y consultas de dirección en lenguaje natural.
 
 ## 5. Restricciones de negocio
 

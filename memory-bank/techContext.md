@@ -9,7 +9,7 @@ Labels: **Exists** · **Template suggestion** · **To be confirmed**. Section 1 
 Source: [BRIEFING.md](../BRIEFING.md) › How the company is organised and › Technology and Infrastructure.
 
 - Tools: HubSpot as CRM (Customer Relationship Management), legacy Zendesk, a home-built ATS (Applicant Tracking System) from the 2010s, Google Workspace and spreadsheets.
-- Corporate Training with PDF (Portable Document Format), Google Form and spreadsheet; Human Resources with email and spreadsheets; management with a weekly PDF report made by hand.
+- Corporate Training with PDF, Google Form and spreadsheet; Human Resources with email and spreadsheets; management with a weekly PDF report made by hand.
 - Gaps: disconnected tools; no telemetry or centralised logging; failures are detected by users; manual deployments; support without a knowledge base or real-time visibility.
 
 ## 2. Development environment
@@ -43,19 +43,19 @@ Source: [README.md](../README.md) › Folder guide and the actual contents of th
 | ---------------- | --------------------------------------------------- | ---------------------------------------------------------- |
 | `uis/website`    | Public website                                      | not created                                                |
 | `uis/backoffice` | Internal administration application                 | not created                                                |
-| `services/`      | APIs (Application Programming Interface) and workers | template README only                                       |
+| `services/`      | APIs and workers                                     | template README only                                       |
 | `agents/`        | One agent per subfolder                             | exists (only template `_template/` and `tools/`)           |
 | `skills/`        | Reusable skills (`SKILL.md` and scripts)            | exists (`_template/`, `data-analysis/` and empty folders)  |
 | `mcps/`          | MCP (Model Context Protocol) servers                | template README only                                       |
 | `workflows/`     | Automations and orchestration                       | template README only                                       |
 | `.agents/`       | Coding agent configuration (rules, skills)          | not created                                                |
 
-Note: `skills/` (template) is for skills of Nexova's artificial intelligence (AI) product; the coding agent's skills go in `.agents/skills/`.
+Note: `skills/` (template) is for skills of Nexova's AI product; the coding agent's skills go in `.agents/skills/`.
 
 ## 5. Architecture decisions
 
 - **Briefing renamed from `CONTEXT.md` to `BRIEFING.md` (and `BRIEFING.es.md`)** · Project requirement: `BRIEFING.md` at the root · 2026-11-17 (commit e1ecfd0).
-- **Naming convention**: kebab-case for new files (rules, skills, docs); snake_case for Python code (PEP 8, Python Enhancement Proposal 8); UPPERCASE for root meta files (`README.md`, `AGENTS.md`, `BRIEFING.md`). Spanish translations use the `.es.md` suffix (`BRIEFING.es.md`, `projectbrief.es.md`). Exception: the memory bank keeps its canonical names (`projectbrief.md`, `techContext.md`, `progress.md`) · Each convention follows its ecosystem's standard; the memory bank names are a project requirement · 2026-11-20.
+- **Naming convention**: kebab-case for new files (rules, skills, docs); snake_case for Python code (PEP 8); UPPERCASE for root meta files (`README.md`, `AGENTS.md`, `BRIEFING.md`). Spanish translations use the `.es.md` suffix (`BRIEFING.es.md`, `projectbrief.es.md`). Exception: the memory bank keeps its canonical names (`projectbrief.md`, `techContext.md`, `progress.md`) · Each convention follows its ecosystem's standard; the memory bank names are a project requirement · 2026-11-20.
 - **Coding agent in neutral paths**: `AGENTS.md` and `.agents/` (rules, skills); no files specific to a particular tool are versioned · `AGENTS.md` is an open standard, the project requires `.agents/` and the repository is not tied to a vendor · 2026-11-20.
 - **Language**: the files the agent reads (`AGENTS.md`, `memory-bank/`, `.agents/`) are in English and are the source of truth. Only stable files have a `.es.md` translation, for the team to read; if they differ, English prevails · A single source for the agent, consistent with `BRIEFING.md`, and fewer tokens · 2026-11-20.
 

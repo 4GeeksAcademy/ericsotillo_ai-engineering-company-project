@@ -16,7 +16,7 @@ Details in [BRIEFING.md](../BRIEFING.md#the-departments-and-their-problems).
 
 | Area                                  | Manager                                         | Main need                                                   |
 | ------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
-| Talent Selection Operations           | Javier Almeida                                  | Automatic scoring and ranking of curriculum vitae (CV)      |
+| Talent Selection Operations           | Javier Almeida                                  | Automatic scoring and ranking of CVs                        |
 | Corporate Training                    | Elena Vargas                                    | Catalogue with online enrolment and programme recommendation |
 | Customer Support (outsourced service) | Roberto Díaz                                    | Chatbot that resolves 40% of queries without human intervention |
 | Sales and Business Development        | Megan Clarke or Marcos Ibáñez (to be confirmed) | Automated prospecting and follow-up alerts                  |
@@ -30,7 +30,7 @@ Details in [BRIEFING.md](../BRIEFING.md#the-departments-and-their-problems).
 Systems, automations and intelligent tools so that Nexova does what it already does well faster, at greater scale and with less manual effort.
 
 - **By area**: dashboards on a common data pipeline, portals (candidates, learners, employees), automations with alerts and sentiment analysis of tickets.
-- **Artificial intelligence (AI) capabilities**: CV scoring and ranking; Retrieval-Augmented Generation (RAG) over the candidate database and in the support chatbot; semantic search over the support knowledge base; training programme recommendation; AI-assisted content; agents for candidate emails, sales proposals, Human Resources queries, training plans, technical architecture and natural-language management queries.
+- **AI capabilities**: CV scoring and ranking; Retrieval-Augmented Generation (RAG) over the candidate database and in the support chatbot; semantic search over the support knowledge base; training programme recommendation; AI-assisted content; agents for candidate emails, sales proposals, Human Resources queries, training plans, technical architecture and natural-language management queries.
 
 ## 5. Business constraints
 
