@@ -7,6 +7,7 @@ Last updated: 2026-11-20
 - Company briefing in [BRIEFING.md](../BRIEFING.md) (renamed from `CONTEXT.md`).
 - Memory bank: [projectbrief.md](projectbrief.md) (business), [techContext.md](techContext.md) (technical context) and [progress.md](progress.md) (progress).
 - Memory bank translated into English (source of truth); Spanish translation of the brief in [projectbrief.es.md](projectbrief.es.md).
+- Agent instructions in [AGENTS.md](../AGENTS.md) (session start, language, pre-commit flow, protected paths, stop and ask); Spanish translation in [AGENTS.es.md](../AGENTS.es.md).
 
 ## In progress
 
@@ -17,7 +18,6 @@ Last updated: 2026-11-20
 ## Next
 
 1. Complete the current iteration:
-   - `AGENTS.md`: memory files read at session start, pre-commit flow and protected files.
    - `.gitignore` with secrets and local files.
    - Rules in `.agents/rules/` and a skill in `.agents/skills/`.
    - Pull request to `main` and merge.
