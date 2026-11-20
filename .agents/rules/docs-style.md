@@ -11,7 +11,7 @@ alwaysApply: false
 
 ## Rules
 
-1. **Status labels**: use these exact words, never synonyms: `Exists`, `Template suggestion`, `Inference`, `To be confirmed`, `To be decided`.
+1. **Status labels**: use these exact words, never synonyms: `Exists`, `Template suggestion`, `Inference`, `To be confirmed`, `To be decided`. Under `To be decided`, a candidate the developer proposes may be named as `Candidate: X`, without adding reasons the developer did not give.
 2. **Single source**: write each fact in one place and link to it elsewhere. Current state (done, in progress, blockers) lives only in `memory-bank/progress.md`; do not write statements that will go stale in other files.
 3. **Project voice**: write as the Nexova project team. Use "iteration" and "project requirement"; "Milestone N" only as an iteration label. Never mention a course, grading or students.
 4. **References**: cite `BRIEFING.md` by section heading, never by line number.
