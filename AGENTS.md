@@ -28,6 +28,10 @@ Read [BRIEFING.md](BRIEFING.md) only when you need the detail of an area, not in
 - `.agents/` is the coding agent's configuration (rules, skills). `agents/` and `skills/` are Nexova's AI product. Do not mix them.
 - Do not create parallel trees: if a folder already exists for something, use it.
 
+## Rules and skills
+
+- [docs-style](.agents/rules/docs-style.md): writing conventions for Markdown files (auto-attached to `**/*.md`).
+
 ## Pre-commit flow
 
 Run every step before each commit and check its verification.

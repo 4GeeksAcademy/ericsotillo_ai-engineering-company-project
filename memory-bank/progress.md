@@ -9,6 +9,7 @@ Last updated: 2026-11-20
 - Memory bank translated into English (source of truth); Spanish translation of the brief in [projectbrief.es.md](projectbrief.es.md).
 - Agent instructions in [AGENTS.md](../AGENTS.md) (session start, language, pre-commit flow, protected paths, stop and ask); Spanish translation in [AGENTS.es.md](../AGENTS.es.md).
 - [.gitignore](../.gitignore) for secrets (`.env`), Python, Node, logs and OS files.
+- First agent rule: [docs-style](../.agents/rules/docs-style.md), auto-attached to Markdown files.
 
 ## In progress
 
@@ -19,7 +20,7 @@ Last updated: 2026-11-20
 ## Next
 
 1. Complete the current iteration:
-   - Rules in `.agents/rules/` and a skill in `.agents/skills/`.
+   - A skill in `.agents/skills/`.
    - Pull request to `main` and merge.
 2. Upcoming iterations planned, according to [README.md](../README.md): Web, Programming, Backend, Telemetry, RAG (Retrieval-Augmented Generation), Agents, Workflows and Real time. The scope of each one will be defined when it starts.
 

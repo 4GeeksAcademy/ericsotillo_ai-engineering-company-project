@@ -48,7 +48,7 @@ Source: [README.md](../README.md) › Folder guide and the actual contents of th
 | `skills/`        | Reusable skills (`SKILL.md` and scripts)            | exists (`_template/`, `data-analysis/` and empty folders)  |
 | `mcps/`          | MCP (Model Context Protocol) servers                | template README only                                       |
 | `workflows/`     | Automations and orchestration                       | template README only                                       |
-| `.agents/`       | Coding agent configuration (rules, skills)          | not created                                                |
+| `.agents/`       | Coding agent configuration (rules, skills)          | exists (`rules/` only)                                     |
 
 Note: `skills/` (template) is for skills of Nexova's AI product; the coding agent's skills go in `.agents/skills/`.
 
