@@ -10,6 +10,7 @@ Last updated: 2026-11-20
 - Agent instructions in [AGENTS.md](../AGENTS.md) (session start, language, pre-commit flow, protected paths, stop and ask); Spanish translation in [AGENTS.es.md](../AGENTS.es.md).
 - [.gitignore](../.gitignore) for secrets (`.env`), Python, Node, logs and OS files.
 - First agent rule: [docs-style](../.agents/rules/docs-style.md), auto-attached to Markdown files.
+- First agent skill: [update-memory-bank](../.agents/skills/update-memory-bank/SKILL.md), indexed in [AGENTS.md](../AGENTS.md) and used in pre-commit step 5.
 
 ## In progress
 
@@ -20,7 +21,6 @@ Last updated: 2026-11-20
 ## Next
 
 1. Complete the current iteration:
-   - A skill in `.agents/skills/`.
    - Pull request to `main` and merge.
 2. Upcoming iterations planned, according to [README.md](../README.md): Web, Programming, Backend, Telemetry, RAG (Retrieval-Augmented Generation), Agents, Workflows and Real time. The scope of each one will be defined when it starts.
 

@@ -31,6 +31,7 @@ Read [BRIEFING.md](BRIEFING.md) only when you need the detail of an area, not in
 ## Rules and skills
 
 - [docs-style](.agents/rules/docs-style.md): writing conventions for Markdown files (auto-attached to `**/*.md`).
+- [update-memory-bank](.agents/skills/update-memory-bank/SKILL.md) (skill): update `progress.md` and `techContext.md` after a task is completed, started or blocked. Used in pre-commit step 5.
 
 ## Pre-commit flow
 

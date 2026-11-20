@@ -33,6 +33,7 @@ Lee [BRIEFING.md](BRIEFING.md) solo cuando necesites el detalle de un área, no 
 ## Reglas y skills
 
 - [docs-style](.agents/rules/docs-style.md): convenciones de redacción para archivos Markdown (se aplica automáticamente a `**/*.md`).
+- [update-memory-bank](.agents/skills/update-memory-bank/SKILL.md) (skill): actualiza `progress.md` y `techContext.md` cuando una tarea se completa, empieza o se bloquea. Se usa en el paso 5 del flujo previo al commit.
 
 ## Flujo previo al commit
 
