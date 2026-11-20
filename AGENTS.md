@@ -1,7 +1,5 @@
 # AGENTS.md
 
-Instructions for coding agents working in this repository.
-
 ## Project
 
 Nexova Solutions is a human resources and talent selection consultancy (Valencia and Miami) that needs automation, data and AI tools to operate at scale. This monorepo holds its applications, AI agents, skills and workflows. Business context: [memory-bank/projectbrief.md](memory-bank/projectbrief.md); full briefing: [BRIEFING.md](BRIEFING.md).
@@ -22,10 +20,10 @@ Read [BRIEFING.md](BRIEFING.md) only when you need the detail of an area, not in
 
 - Read and update only the English files. The `.es.md` files are translations for people.
 - If you change a file that has a `.es.md` translation, update the translation in the same commit.
-- Rationale: [techContext.md › Architecture decisions](memory-bank/techContext.md#5-architecture-decisions).
 
 ## Where things go
 
+- Application layer: public website in `uis/website`, internal app in `uis/backoffice`, APIs in `services/`. Create them only when a task asks for it.
 - Before creating a file, check [techContext.md › Application layer map](memory-bank/techContext.md#4-application-layer-map) for the folder it belongs in.
 - `.agents/` is the coding agent's configuration (rules, skills). `agents/` and `skills/` are Nexova's AI product. Do not mix them.
 - Do not create parallel trees: if a folder already exists for something, use it.
@@ -42,6 +40,12 @@ Run every step before each commit and check its verification.
 6. **Commit**: Conventional Commits message (`type(scope): description`), one logical unit per commit, no tool co-author lines.
 
 If any step fails, stop and tell the developer. Do not commit.
+
+## Delivery
+
+1. Work on a `<type>/<short-name>` branch, never on `main`. Types: `feature/` (for `feat` commits), `fix/`, `docs/`, `chore/`.
+2. Push only your working branch and open a pull request to the branch it was created from (usually `main`).
+3. A developer reviews and merges it. Never push to or merge into any other branch yourself.
 
 ## Protected paths
 

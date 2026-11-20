@@ -2,8 +2,6 @@
 
 > Traducción de [AGENTS.md](AGENTS.md). Si difiere, prevalece la versión en inglés.
 
-Instrucciones para los agentes de código que trabajan en este repositorio.
-
 ## Proyecto
 
 Nexova Solutions es una consultora de recursos humanos y selección de talento (Valencia y Miami) que necesita herramientas de automatización, datos e IA para operar a escala. Este monorepo contiene sus aplicaciones, agentes de IA, skills y workflows. Contexto de negocio: [memory-bank/projectbrief.md](memory-bank/projectbrief.md); briefing completo: [BRIEFING.md](BRIEFING.md).
@@ -24,10 +22,10 @@ Lee [BRIEFING.md](BRIEFING.md) solo cuando necesites el detalle de un área, no 
 
 - Lee y actualiza solo los archivos en inglés. Los archivos `.es.md` son traducciones para personas.
 - Si cambias un archivo que tiene traducción `.es.md`, actualiza la traducción en el mismo commit.
-- Justificación: [techContext.md › Architecture decisions](memory-bank/techContext.md#5-architecture-decisions).
 
 ## Dónde va cada cosa
 
+- Capa de aplicación: web pública en `uis/website`, app interna en `uis/backoffice`, APIs en `services/`. Créalas solo cuando una tarea lo pida.
 - Antes de crear un archivo, consulta [techContext.md › Application layer map](memory-bank/techContext.md#4-application-layer-map) para saber en qué carpeta va.
 - `.agents/` es la configuración del agente de código (reglas, skills). `agents/` y `skills/` son el producto de IA de Nexova. No los mezcles.
 - No crees árboles paralelos: si ya existe una carpeta para algo, úsala.
@@ -44,6 +42,12 @@ Ejecuta cada paso antes de cada commit y comprueba su verificación.
 6. **Commit**: mensaje en formato Conventional Commits (`type(scope): description`), una unidad lógica por commit, sin líneas de coautoría de herramientas.
 
 Si algún paso falla, detente y avisa al desarrollador. No hagas commit.
+
+## Entrega
+
+1. Trabaja en una rama `<tipo>/<nombre-corto>`, nunca en `main`. Tipos: `feature/` (para commits `feat`), `fix/`, `docs/`, `chore/`.
+2. Sube solo tu rama de trabajo y abre una pull request hacia la rama de la que salió (normalmente `main`).
+3. Un desarrollador la revisa y hace el merge. Nunca hagas push ni merge a ninguna otra rama tú mismo.
 
 ## Rutas protegidas
 
