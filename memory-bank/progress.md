@@ -1,33 +1,34 @@
 # Progress: Nexova Solutions
 
-Última actualización: 2026-11-20
+Last updated: 2026-11-20
 
-## Hecho
+## Done
 
-- Briefing de la empresa en [BRIEFING.md](../BRIEFING.md) (renombrado desde `CONTEXT.md`).
-- Memory bank: [projectbrief.md](projectbrief.md) (negocio) y [techContext.md](techContext.md) (contexto técnico).
+- Company briefing in [BRIEFING.md](../BRIEFING.md) (renamed from `CONTEXT.md`).
+- Memory bank: [projectbrief.md](projectbrief.md) (business), [techContext.md](techContext.md) (technical context) and [progress.md](progress.md) (progress).
+- Memory bank translated into English (source of truth); Spanish translation of the brief in [projectbrief.es.md](projectbrief.es.md).
 
-## En curso
+## In progress
 
-**Infraestructura para agentes de código (Hito 1)**, rama `feature/agent-memory-bank`: memoria del proyecto, instrucciones, reglas y skills para trabajar con agentes de código en el monorepo.
+**Infrastructure for coding agents (Milestone 1)**, branch `feature/agent-memory-bank`: project memory, instructions, rules and skills for working with coding agents in the monorepo.
 
-- Alcance: solo documentación y configuración del agente. En esta iteración no se crean aplicaciones: ni `uis/website`, ni `uis/backoffice`, ni código en `services/`.
+- Scope: agent documentation and configuration only. No applications are created in this iteration: no `uis/website`, no `uis/backoffice`, no code in `services/`.
 
-## Siguiente
+## Next
 
-1. Completar la iteración en curso:
-   - `AGENTS.md`: archivos de memoria que se leen al iniciar sesión, flujo previo al commit y archivos protegidos.
-   - `.gitignore` con secretos y archivos locales.
-   - Reglas en `.agents/rules/` y una skill en `.agents/skills/`.
-   - Pull request a `main` y merge.
-2. Próximas iteraciones previstas, según [README.md](../README.md): Web, Programación, Backend, Telemetría, RAG (Retrieval-Augmented Generation), Agentes, Workflows y Tiempo real. El alcance de cada una se definirá al iniciarla.
+1. Complete the current iteration:
+   - `AGENTS.md`: memory files read at session start, pre-commit flow and protected files.
+   - `.gitignore` with secrets and local files.
+   - Rules in `.agents/rules/` and a skill in `.agents/skills/`.
+   - Pull request to `main` and merge.
+2. Upcoming iterations planned, according to [README.md](../README.md): Web, Programming, Backend, Telemetry, RAG (Retrieval-Augmented Generation), Agents, Workflows and Real time. The scope of each one will be defined when it starts.
 
-## Problemas / bloqueos
+## Problems / blockers
 
-| Problema | Impacto | Cuándo se resuelve (previsto) |
+| Problem | Impact | When it gets resolved (planned) |
 | --- | --- | --- |
-| `.gitignore` vacío | Un `.env` con secretos se podría versionar | En la iteración en curso |
-| `uv sync` falla en `post-create.sh`: no hay `pyproject.toml` | El script de creación del devcontainer se detiene en ese paso | Al crear el primer proyecto Python (backend) |
-| `@repo/shared-types`: `main` y `types` apuntan a `index.ts`, pero el archivo está en `types/index.ts` | Importar el paquete fallará | Cuando la primera app use el paquete |
+| Empty `.gitignore` | A `.env` with secrets could be versioned | In the current iteration |
+| `uv sync` fails in `post-create.sh`: there is no `pyproject.toml` | The devcontainer creation script stops at that step | When the first Python project (backend) is created |
+| `@repo/shared-types`: `main` and `types` point to `index.ts`, but the file is at `types/index.ts` | Importing the package will fail | When the first app uses the package |
 
-Inconsistencias del briefing pendientes de confirmar: ver [projectbrief.md](projectbrief.md), sección 6.
+Briefing inconsistencies to be confirmed: see [projectbrief.md](projectbrief.md), section 6.

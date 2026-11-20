@@ -1,72 +1,73 @@
 # Tech context: Nexova Solutions
 
-Contexto técnico del monorepo. El negocio está en [projectbrief.md](projectbrief.md).
+Technical context of the monorepo. The business is in [projectbrief.md](projectbrief.md).
 
-Etiquetas: **Existe** · **Sugerencia de la plantilla** · **Pendiente de confirmar**. La sección 1 describe sistemas de Nexova, no del repositorio: solo cita su fuente.
+Labels: **Exists** · **Template suggestion** · **To be confirmed**. Section 1 describes Nexova's systems, not the repository's: it only cites its source.
 
-## 1. Sistemas actuales de Nexova
+## 1. Nexova's current systems
 
-Fuente: [BRIEFING.md](../BRIEFING.md) › How the company is organised y › Technology and Infrastructure.
+Source: [BRIEFING.md](../BRIEFING.md) › How the company is organised and › Technology and Infrastructure.
 
-- Herramientas: HubSpot como CRM (Customer Relationship Management), Zendesk heredado, un ATS (Applicant Tracking System) propio de los años 2010, Google Workspace y hojas de cálculo.
-- Formación con PDF (Portable Document Format), Google Form y hoja de cálculo; Recursos Humanos con email y hojas de cálculo; dirección con un informe semanal en PDF hecho a mano.
-- Carencias: herramientas sin conectar; sin telemetría ni logging centralizado; los fallos se detectan por los usuarios; despliegues manuales; soporte sin base de conocimiento ni visibilidad en tiempo real.
+- Tools: HubSpot as CRM (Customer Relationship Management), legacy Zendesk, a home-built ATS (Applicant Tracking System) from the 2010s, Google Workspace and spreadsheets.
+- Corporate Training with PDF (Portable Document Format), Google Form and spreadsheet; Human Resources with email and spreadsheets; management with a weekly PDF report made by hand.
+- Gaps: disconnected tools; no telemetry or centralised logging; failures are detected by users; manual deployments; support without a knowledge base or real-time visibility.
 
-## 2. Entorno de desarrollo
+## 2. Development environment
 
-Fuentes: [devcontainer.json](../.devcontainer/devcontainer.json), [post-create.sh](../.devcontainer/post-create.sh), [README.md](../README.md) › How to start.
+Sources: [devcontainer.json](../.devcontainer/devcontainer.json), [post-create.sh](../.devcontainer/post-create.sh), [README.md](../README.md) › How to start.
 
-- **Existe**: devcontainer apto para Codespaces, imagen `devcontainers/universal:2`, usuario `codespace`, socket de Docker del host montado.
-- **Existe**: puertos reenviados 3000, 8000 y 5678. **Pendiente de confirmar**: ningún archivo documenta para qué es cada uno.
-- **Existe**: `post-create.sh` activa Corepack y `pnpm@latest`, instala `uv` y ejecuta `uv sync`.
-- **Pendiente de confirmar**: `uv sync` necesita un `pyproject.toml` y el repositorio no tiene ninguno.
+- **Exists**: Codespaces-ready devcontainer, image `devcontainers/universal:2`, user `codespace`, host Docker socket mounted.
+- **Exists**: forwarded ports 3000, 8000 and 5678. **To be confirmed**: no file documents what each one is for.
+- **Exists**: `post-create.sh` enables Corepack and `pnpm@latest`, installs `uv` and runs `uv sync`.
+- **To be confirmed**: `uv sync` needs a `pyproject.toml` and the repository has none.
 
-## 3. Stack del monorepo
+## 3. Monorepo stack
 
-| Elemento                            | Etiqueta                                  | Fuente                                                                                                                      |
-| ----------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Python                              | Existe                                    | [devcontainer.json](../.devcontainer/devcontainer.json), [pandas_clean.py](../skills/data-analysis/scripts/pandas_clean.py) |
-| TypeScript                          | Existe                                    | [index.ts](../packages/shared/types/index.ts)                                                                               |
-| uv (gestor Python)                  | Existe (instalado)                        | [post-create.sh](../.devcontainer/post-create.sh)                                                                           |
-| pnpm (gestor JavaScript/TypeScript) | Existe (instalado); sin workspace en raíz | [post-create.sh](../.devcontainer/post-create.sh); [README.md](../README.md) › Current status of the template               |
-| `@repo/shared-types`                | Existe                                    | [package.json](../packages/shared/package.json)                                                                             |
-| FastAPI, n8n                        | Sugerencia de la plantilla                | [README.md](../README.md) › services/, › workflows/                                                                         |
-| `docker-compose.yml`                | Sugerencia de la plantilla (no existe)    | [README.md](../README.md) › Root files                                                                                      |
+| Item                                  | Label                                      | Source                                                                                                                      |
+| ------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Python                                | Exists                                     | [devcontainer.json](../.devcontainer/devcontainer.json), [pandas_clean.py](../skills/data-analysis/scripts/pandas_clean.py) |
+| TypeScript                            | Exists                                     | [index.ts](../packages/shared/types/index.ts)                                                                               |
+| uv (Python manager)                   | Exists (installed)                         | [post-create.sh](../.devcontainer/post-create.sh)                                                                           |
+| pnpm (JavaScript/TypeScript manager)  | Exists (installed); no root workspace      | [post-create.sh](../.devcontainer/post-create.sh); [README.md](../README.md) › Current status of the template               |
+| `@repo/shared-types`                  | Exists                                     | [package.json](../packages/shared/package.json)                                                                             |
+| FastAPI, n8n                          | Template suggestion                        | [README.md](../README.md) › services/, › workflows/                                                                         |
+| `docker-compose.yml`                  | Template suggestion (does not exist)       | [README.md](../README.md) › Root files                                                                                      |
 
-**Pendiente de confirmar**: `main` y `types` de `@repo/shared-types` apuntan a `index.ts`, pero el archivo está en `types/index.ts`.
+**To be confirmed**: `main` and `types` in `@repo/shared-types` point to `index.ts`, but the file is at `types/index.ts`.
 
-## 4. Mapa de la capa de aplicación
+## 4. Application layer map
 
-Fuente: [README.md](../README.md) › Folder guide y contenido real del repositorio.
+Source: [README.md](../README.md) › Folder guide and the actual contents of the repository.
 
-| Ruta             | Qué va                                             | Estado                                                    |
-| ---------------- | -------------------------------------------------- | --------------------------------------------------------- |
-| `uis/website`    | Web pública                                        | no creada                                                 |
-| `uis/backoffice` | Aplicación interna de administración               | no creada                                                 |
-| `services/`      | APIs (Application Programming Interface) y workers | solo README de plantilla                                  |
-| `agents/`        | Un agente por subcarpeta                           | existe (solo `_template/` y `tools/` de plantilla)        |
-| `skills/`        | Skills reutilizables (`SKILL.md` y scripts)        | existe (`_template/`, `data-analysis/` y carpetas vacías) |
-| `mcps/`          | Servidores MCP (Model Context Protocol)            | solo README de plantilla                                  |
-| `workflows/`     | Automatizaciones y orquestación                    | solo README de plantilla                                  |
-| `.agents/`       | Configuración del agente de código (rules, skills) | no creada                                                 |
+| Path             | What goes there                                     | Status                                                     |
+| ---------------- | --------------------------------------------------- | ---------------------------------------------------------- |
+| `uis/website`    | Public website                                      | not created                                                |
+| `uis/backoffice` | Internal administration application                 | not created                                                |
+| `services/`      | APIs (Application Programming Interface) and workers | template README only                                       |
+| `agents/`        | One agent per subfolder                             | exists (only template `_template/` and `tools/`)           |
+| `skills/`        | Reusable skills (`SKILL.md` and scripts)            | exists (`_template/`, `data-analysis/` and empty folders)  |
+| `mcps/`          | MCP (Model Context Protocol) servers                | template README only                                       |
+| `workflows/`     | Automations and orchestration                       | template README only                                       |
+| `.agents/`       | Coding agent configuration (rules, skills)          | not created                                                |
 
-Nota: `skills/` (plantilla) es para skills del producto de inteligencia artificial (IA) de Nexova; las skills del agente de código van en `.agents/skills/`.
+Note: `skills/` (template) is for skills of Nexova's artificial intelligence (AI) product; the coding agent's skills go in `.agents/skills/`.
 
-## 5. Decisiones de arquitectura
+## 5. Architecture decisions
 
-- **Briefing renombrado de `CONTEXT.md` a `BRIEFING.md` (y `BRIEFING.es.md`)** · Requisito del proyecto: `BRIEFING.md` en la raíz · 2026-11-17 (commit e1ecfd0).
-- **Convención de nombres**: kebab-case para archivos nuevos (reglas, skills, docs); snake_case para código Python (PEP 8, Python Enhancement Proposal 8); MAYÚSCULAS para archivos meta de la raíz (`README.md`, `AGENTS.md`, `BRIEFING.md`). Excepción: el memory bank conserva sus nombres canónicos (`projectbrief.md`, `techContext.md`, `progress.md`) · Cada convención sigue el estándar de su ecosistema; los nombres del memory bank son requisito del proyecto · 2026-11-20.
-- **Agente de código en rutas neutrales**: `AGENTS.md` y `.agents/` (rules, skills); no se versionan archivos propios de una herramienta concreta · `AGENTS.md` es un estándar abierto, el proyecto requiere `.agents/` y el repositorio no queda atado a un proveedor · 2026-11-20.
+- **Briefing renamed from `CONTEXT.md` to `BRIEFING.md` (and `BRIEFING.es.md`)** · Project requirement: `BRIEFING.md` at the root · 2026-11-17 (commit e1ecfd0).
+- **Naming convention**: kebab-case for new files (rules, skills, docs); snake_case for Python code (PEP 8, Python Enhancement Proposal 8); UPPERCASE for root meta files (`README.md`, `AGENTS.md`, `BRIEFING.md`). Spanish translations use the `.es.md` suffix (`BRIEFING.es.md`, `projectbrief.es.md`). Exception: the memory bank keeps its canonical names (`projectbrief.md`, `techContext.md`, `progress.md`) · Each convention follows its ecosystem's standard; the memory bank names are a project requirement · 2026-11-20.
+- **Coding agent in neutral paths**: `AGENTS.md` and `.agents/` (rules, skills); no files specific to a particular tool are versioned · `AGENTS.md` is an open standard, the project requires `.agents/` and the repository is not tied to a vendor · 2026-11-20.
+- **Language**: the files the agent reads (`AGENTS.md`, `memory-bank/`, `.agents/`) are in English and are the source of truth. Only stable files have a `.es.md` translation, for the team to read; if they differ, English prevails · A single source for the agent, consistent with `BRIEFING.md`, and fewer tokens · 2026-11-20.
 
-## 6. Restricciones técnicas
+## 6. Technical constraints
 
-- No crear árboles paralelos: cada cosa va en la carpeta que define [README.md](../README.md) › Folder guide.
-- Secretos solo en `.env`, nunca versionado. **Pendiente de confirmar**: [.gitignore](../.gitignore) está vacío; hoy `.env` no está excluido.
-- Datos personales reales nunca en el repositorio (tampoco en `data/raw/`): solo ficticios ([data/raw/README.md](../data/raw/README.md) › Recommendation).
+- Do not create parallel trees: everything goes in the folder defined by [README.md](../README.md) › Folder guide.
+- Secrets only in `.env`, never versioned. **To be confirmed**: [.gitignore](../.gitignore) is empty; `.env` is not excluded today.
+- Real personal data never in the repository (not in `data/raw/` either): only fictitious data ([data/raw/README.md](../data/raw/README.md) › Recommendation).
 
-## 7. Por decidir
+## 7. To be decided
 
-- Framework de frontend.
-- Base de datos.
-- Proveedor de LLM (Large Language Model).
-- Arquitectura del backend: la plantilla sugiere una única API FastAPI con routers por dominio ([README.md](../README.md) › services/); aún no adoptada.
+- Frontend framework.
+- Database.
+- LLM (Large Language Model) provider.
+- Backend architecture: the template suggests a single FastAPI API with routers per domain ([README.md](../README.md) › services/); not adopted yet.
