@@ -51,8 +51,9 @@ Si algún paso falla, detente y avisa al desarrollador. No hagas commit.
 ## Entrega
 
 1. Trabaja en una rama `<tipo>/<nombre-corto>`, nunca en `main`. Tipos: `feature/` (para commits `feat`), `fix/`, `docs/`, `chore/`.
-2. Sube solo tu rama de trabajo y abre una pull request hacia la rama de la que salió (normalmente `main`).
-3. Un desarrollador la revisa y hace el merge. Nunca hagas push ni merge a ninguna otra rama tú mismo.
+2. Antes de abrir la pull request, ejecuta la skill update-memory-bank para que `memory-bank/progress.md` muestre ya el estado tras el merge (la iteración en *Done*).
+3. Sube solo tu rama de trabajo y abre una pull request hacia la rama de la que salió (normalmente `main`).
+4. Un desarrollador la revisa y hace el merge. Nunca hagas push ni merge a ninguna otra rama tú mismo.
 
 ## Rutas protegidas
 
