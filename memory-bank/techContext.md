@@ -62,7 +62,7 @@ Note: `skills/` (template) is for skills of Nexova's AI product; the coding agen
 ## 6. Technical constraints
 
 - Do not create parallel trees: everything goes in the folder defined by [README.md](../README.md) › Folder guide.
-- Secrets only in `.env`, never versioned. **To be confirmed**: [.gitignore](../.gitignore) is empty; `.env` is not excluded today.
+- Secrets only in `.env`, never versioned ([.gitignore](../.gitignore) excludes `.env` and `.env.*`; only `.env.example` may be versioned).
 - Real personal data never in the repository (not in `data/raw/` either): only fictitious data ([data/raw/README.md](../data/raw/README.md) › Recommendation).
 
 ## 7. To be decided
