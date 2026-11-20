@@ -49,8 +49,9 @@ If any step fails, stop and tell the developer. Do not commit.
 ## Delivery
 
 1. Work on a `<type>/<short-name>` branch, never on `main`. Types: `feature/` (for `feat` commits), `fix/`, `docs/`, `chore/`.
-2. Push only your working branch and open a pull request to the branch it was created from (usually `main`).
-3. A developer reviews and merges it. Never push to or merge into any other branch yourself.
+2. Before opening the pull request, run the update-memory-bank skill so that `memory-bank/progress.md` already shows the state after the merge (the iteration under *Done*).
+3. Push only your working branch and open a pull request to the branch it was created from (usually `main`).
+4. A developer reviews and merges it. Never push to or merge into any other branch yourself.
 
 ## Protected paths
 

@@ -4,6 +4,8 @@ Last updated: 2026-11-20
 
 ## Done
 
+**Infrastructure for coding agents (Milestone 1)**: completed.
+
 - Company briefing in [BRIEFING.md](../BRIEFING.md) (renamed from `CONTEXT.md`).
 - Memory bank: [projectbrief.md](projectbrief.md) (business), [techContext.md](techContext.md) (technical context) and [progress.md](progress.md) (progress).
 - Memory bank translated into English (source of truth); Spanish translation of the brief in [projectbrief.es.md](projectbrief.es.md).
@@ -14,15 +16,11 @@ Last updated: 2026-11-20
 
 ## In progress
 
-**Infrastructure for coding agents (Milestone 1)**, branch `feature/agent-memory-bank`: project memory, instructions, rules and skills for working with coding agents in the monorepo.
-
-- Scope: agent documentation and configuration only. No applications are created in this iteration: no `uis/website`, no `uis/backoffice`, no code in `services/`.
+None. The next iteration has not started.
 
 ## Next
 
-1. Complete the current iteration:
-   - Pull request to `main` and merge.
-2. Upcoming iterations planned, according to [README.md](../README.md): Web, Programming, Backend, Telemetry, RAG (Retrieval-Augmented Generation), Agents, Workflows and Real time. The scope of each one will be defined when it starts.
+- Upcoming iterations planned, according to [README.md](../README.md): Web, Programming, Backend, Telemetry, RAG (Retrieval-Augmented Generation), Agents, Workflows and Real time. The scope of each one will be defined when it starts.
 
 ## Problems / blockers
 
